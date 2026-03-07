@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+  font-family: 'Space Grotesk', 'Manrope', 'Avenir Next', 'Segoe UI', sans-serif;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at 15% 15%, rgba(46, 170, 143, 0.26), transparent 34%),
+    radial-gradient(circle at 85% 85%, rgba(228, 87, 46, 0.2), transparent 36%),
+    #efe8db;
+  color: #222222;
+}

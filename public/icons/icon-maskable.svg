@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Snake Sprint maskable icon">
+  <rect width="512" height="512" fill="#efe8db"/>
+  <rect x="52" y="52" width="408" height="408" rx="88" fill="#f6f2e8"/>
+  <path d="M152 292c0-56 42-96 104-96h98c14 0 24 10 24 24s-10 24-24 24h-98c-34 0-56 20-56 48s22 48 56 48h42c20 0 34-14 34-34s-14-34-34-34h-24c-14 0-24-10-24-24s10-24 24-24h24c46 0 82 36 82 82s-36 82-82 82h-42c-62 0-104-40-104-96Z" fill="#1a7f64"/>
+  <circle cx="318" cy="306" r="8" fill="#f6f2e8"/>
+  <circle cx="340" cy="306" r="8" fill="#f6f2e8"/>
+  <circle cx="364" cy="154" r="24" fill="#e4572e"/>
+</svg>

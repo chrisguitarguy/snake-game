@@ -1,0 +1,152 @@
+:root {
+  --bg: #efe8db;
+  --card: #fcf8ef;
+  --text: #222222;
+  --muted: #5f6661;
+  --accent: #1a7f64;
+  --accent-strong: #0f5e4a;
+  --danger: #e4572e;
+}
+
+#root {
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  display: grid;
+  place-items: center;
+  animation: fade-in 550ms ease;
+}
+
+.shell {
+  width: min(100%, 760px);
+  background: linear-gradient(150deg, rgba(255, 255, 255, 0.9), rgba(252, 248, 239, 0.85));
+  border: 1px solid rgba(26, 127, 100, 0.18);
+  border-radius: 24px;
+  box-shadow: 0 14px 42px rgba(34, 34, 34, 0.14);
+  padding: clamp(1rem, 3vw, 1.8rem);
+  text-align: center;
+}
+
+.title-card {
+  margin-bottom: 0.8rem;
+}
+
+.eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.72rem;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+h1 {
+  margin: 0.3rem 0;
+  font-size: clamp(2rem, 5.6vw, 3.2rem);
+  line-height: 0.96;
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--muted);
+}
+
+.scoreboard {
+  margin: 1rem 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.scoreboard div {
+  background: var(--card);
+  border: 1px solid rgba(26, 127, 100, 0.14);
+  border-radius: 14px;
+  padding: 0.65rem 0.4rem;
+}
+
+.scoreboard span {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.scoreboard strong {
+  font-size: 1.35rem;
+  color: var(--text);
+}
+
+.board-wrap {
+  margin: 0 auto;
+  width: min(90vw, 480px);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 2px solid rgba(26, 127, 100, 0.26);
+  touch-action: none;
+}
+
+.board {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.status {
+  margin: 0.8rem 0;
+  color: var(--muted);
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+}
+
+button {
+  border: none;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #f6f2e8;
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 0.62rem 1rem;
+  transition: transform 160ms ease, background-color 160ms ease;
+}
+
+button:hover:not(:disabled) {
+  background: var(--accent-strong);
+  transform: translateY(-1px);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.56;
+}
+
+.tips {
+  margin: 0.9rem 0 0;
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 520px) {
+  .shell {
+    border-radius: 20px;
+    padding: 1rem 0.75rem;
+  }
+
+  .scoreboard strong {
+    font-size: 1.15rem;
+  }
+}
