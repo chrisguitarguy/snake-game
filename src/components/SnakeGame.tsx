@@ -206,9 +206,7 @@ export function SnakeGame() {
   return (
     <main className="shell">
       <section className="title-card">
-        <p className="eyebrow">Progressive Web App</p>
-        <h1>Snake Sprint</h1>
-        <p className="subtitle">No backend, no shared state, just responsive React gameplay.</p>
+        <h1>Snake 🐍</h1>
       </section>
 
       <section className="scoreboard" aria-label="Scoreboard">
