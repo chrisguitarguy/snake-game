@@ -11,8 +11,10 @@ function getBasePath(): string {
   return `/${repository}/`
 }
 
+const basePath = getBasePath()
+
 export default defineConfig({
-  base: getBasePath(),
+  base: basePath,
   plugins: [
     react(),
     VitePWA({
@@ -25,17 +27,17 @@ export default defineConfig({
         theme_color: '#1a7f64',
         background_color: '#f6f2e8',
         display: 'standalone',
-        start_url: '/',
-        scope: '/',
+        start_url: basePath,
+        scope: basePath,
         icons: [
           {
-            src: '/icons/icon.svg',
+            src: 'icons/icon.svg',
             sizes: '512x512',
             type: 'image/svg+xml',
             purpose: 'any',
           },
           {
-            src: '/icons/icon-maskable.svg',
+            src: 'icons/icon-maskable.svg',
             sizes: '512x512',
             type: 'image/svg+xml',
             purpose: 'maskable',
