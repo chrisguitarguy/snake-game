@@ -102,6 +102,60 @@ h1 {
   flex-wrap: wrap;
 }
 
+.joystick-wrap {
+  margin: 1rem auto 0;
+  width: 140px;
+  height: 140px;
+}
+
+.joystick {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid rgba(26, 127, 100, 0.28);
+  background:
+    radial-gradient(circle at 50% 50%, rgba(26, 127, 100, 0.1), rgba(26, 127, 100, 0.04) 55%, transparent 56%),
+    var(--card);
+  display: grid;
+  place-items: center;
+  touch-action: none;
+  user-select: none;
+  position: relative;
+  transition: box-shadow 140ms ease;
+}
+
+.joystick.active {
+  box-shadow: inset 0 0 0 2px rgba(26, 127, 100, 0.16);
+}
+
+.joystick::before,
+.joystick::after {
+  content: '';
+  position: absolute;
+  background: rgba(26, 127, 100, 0.12);
+}
+
+.joystick::before {
+  width: 2px;
+  height: 70%;
+}
+
+.joystick::after {
+  width: 70%;
+  height: 2px;
+}
+
+.joystick-knob {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: linear-gradient(160deg, #2eaa8f, #1a7f64);
+  border: 2px solid rgba(246, 242, 232, 0.86);
+  box-shadow: 0 7px 14px rgba(15, 94, 74, 0.32);
+  pointer-events: none;
+  transition: transform 80ms linear;
+}
+
 button {
   border: none;
   border-radius: 999px;
@@ -148,5 +202,10 @@ button:disabled {
 
   .scoreboard strong {
     font-size: 1.15rem;
+  }
+
+  .joystick-wrap {
+    width: 156px;
+    height: 156px;
   }
 }

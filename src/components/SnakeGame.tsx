@@ -13,7 +13,7 @@ import {
   withStatus,
 } from '../game/logic'
 import type { Direction, GameSnapshot } from '../game/types'
-import { useSwipeControls } from '../hooks/useSwipeControls'
+import { Joystick } from './Joystick'
 
 const CELL_SIZE = 24
 const BOARD_PIXELS = DEFAULT_GRID_SIZE * CELL_SIZE
@@ -185,8 +185,6 @@ export function SnakeGame() {
     }
   }, [handleDirection])
 
-  const { onTouchEnd, onTouchStart } = useSwipeControls(handleDirection)
-
   const statusText = useMemo(() => getStatusMessage(snapshot), [snapshot])
 
   const onStart = () => {
@@ -224,7 +222,7 @@ export function SnakeGame() {
         </div>
       </section>
 
-      <div className="board-wrap" onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
+      <div className="board-wrap">
         <canvas
           aria-label="Snake board"
           className="board"
@@ -248,7 +246,9 @@ export function SnakeGame() {
         </button>
       </div>
 
-      <p className="tips">Controls: Arrow keys / WASD / swipe on mobile.</p>
+      <Joystick onDirectionChange={handleDirection} />
+
+      <p className="tips">Controls: Arrow keys / WASD / joystick hold + drag.</p>
     </main>
   )
 }
