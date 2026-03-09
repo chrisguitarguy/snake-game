@@ -13,7 +13,7 @@ import {
   withStatus,
 } from '../game/logic'
 import type { Direction, GameSnapshot } from '../game/types'
-import { Joystick } from './Joystick'
+import { DirectionPad } from './DirectionPad'
 
 const CELL_SIZE = 24
 const BOARD_PIXELS = DEFAULT_GRID_SIZE * CELL_SIZE
@@ -246,9 +246,9 @@ export function SnakeGame() {
         </button>
       </div>
 
-      <Joystick onDirectionChange={handleDirection} />
+      <DirectionPad onDirectionChange={handleDirection} />
 
-      <p className="tips">Controls: Arrow keys / WASD / joystick hold + drag.</p>
+      <p className="tips">Controls: Arrow keys / WASD / on-screen arrows.</p>
     </main>
   )
 }
